@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MineFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="22dp"
+        android:background="#12A1C3"
+        android:gravity="center"
+        android:onClick="test"
+        android:shadowColor="#8E898E"
+        android:shadowDx="4"
+        android:shadowDy="4"
+        android:shadowRadius="2"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick"></TextView>
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@color/white"
+        android:text="登录/注册"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textView" />
+
+    <LinearLayout
+        android:id="@+id/lo_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="216dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/lo_myOrder"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_option_height"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/mine_option_height"
+                android:layout_height="@dimen/mine_option_height" />
+
+            <TextView
+                android:layout_width="310dp"
+                android:layout_height="@dimen/mine_option_height"
+                android:gravity="fill_vertical"
+                android:textColor="@color/black"
+                android:text="我的订单"
+                android:textSize="@dimen/mine_font_size" />
+
+            <ImageView
+                android:layout_width="@dimen/mine_option_height"
+                android:layout_height="match_parent"
+                android:gravity="right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lo_myPost"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_option_height"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/mine_option_height"
+                android:layout_height="@dimen/mine_option_height" />
+
+            <TextView
+                android:layout_width="310dp"
+                android:layout_height="@dimen/mine_option_height"
+                android:gravity="fill_vertical"
+                android:text="我的帖子"
+                android:textColor="@color/black"
+                android:textSize="@dimen/mine_font_size" />
+
+            <ImageView
+                android:layout_width="@dimen/mine_option_height"
+                android:layout_height="match_parent"
+                android:gravity="right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lo_myAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_option_height"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/mine_option_height"
+                android:layout_height="@dimen/mine_option_height" />
+
+            <TextView
+                android:layout_width="310dp"
+                android:layout_height="@dimen/mine_option_height"
+                android:gravity="fill_vertical"
+                android:text="我的回帖"
+                android:textColor="@color/black"
+                android:textSize="@dimen/mine_font_size" />
+
+            <ImageView
+                android:layout_width="@dimen/mine_option_height"
+                android:layout_height="match_parent"
+                android:gravity="right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lo_logout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_option_height"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/mine_option_height"
+                android:layout_height="@dimen/mine_option_height" />
+
+            <TextView
+                android:layout_width="310dp"
+                android:layout_height="@dimen/mine_option_height"
+                android:gravity="fill_vertical"
+                android:text="退出登录"
+                android:textColor="@color/black"
+                android:textSize="@dimen/mine_font_size" />
+
+            <ImageView
+                android:layout_width="@dimen/mine_option_height"
+                android:layout_height="match_parent"
+                android:gravity="right" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_normalOption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lo_login"
+        app:layout_editor_absoluteY="430dp">
+
+        <LinearLayout
+            android:id="@+id/lo_setting"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_option_height"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/mine_option_height"
+                android:layout_height="@dimen/mine_option_height" />
+
+            <TextView
+                android:layout_width="310dp"
+                android:layout_height="@dimen/mine_option_height"
+                android:gravity="fill_vertical"
+                android:text="设置"
+                android:textColor="@color/black"
+                android:textSize="@dimen/mine_font_size" />
+
+            <ImageView
+                android:layout_width="@dimen/mine_option_height"
+                android:layout_height="match_parent"
+                android:gravity="right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lo_preUse"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_option_height"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/mine_option_height"
+                android:layout_height="@dimen/mine_option_height" />
+
+            <TextView
+                android:layout_width="310dp"
+                android:layout_height="@dimen/mine_option_height"
+                android:gravity="fill_vertical"
+                android:text="说明"
+                android:textColor="@color/black"
+                android:textSize="@dimen/mine_font_size" />
+
+            <ImageView
+                android:layout_width="@dimen/mine_option_height"
+                android:layout_height="match_parent"
+                android:gravity="right" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

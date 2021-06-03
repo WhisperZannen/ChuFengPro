@@ -1,0 +1,107 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+
+    defaultConfig {
+        applicationId "com.fun.chufengpro"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(includes: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'org.jetbrains:annotations:15.0'
+    implementation 'androidx.room:room-runtime:2.2.5'
+    implementation files('libs\\AMap2DMap_5.2.0_AMapSearch_5.7.0_AMapLocation_3.7.0_20171229.jar')
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.github.pinguo-zhouwei:MZBannerView:v2.0.2'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.2.2'
+    implementation 'com.alibaba:fastjson:1.2.62'
+    annotationProcessor 'androidx.room:room-compiler:2.2.5'
+//    事件总线
+    implementation 'org.greenrobot:eventbus:3.1.1'
+//    九宫格图片展示
+    implementation project(':ninegridview')
+    // App extends MultiDexApplication
+    implementation 'com.android.support:multidex:1.0.3'
+
+    // SwipeRefreshLayout下拉刷新
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+    // Grid网格布局
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    // Glide图片加载
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    //选择图片
+    implementation 'com.lzy.widget:imagepicker:0.5.4'
+    //上传图片
+    implementation 'com.zhy:okhttputils:2.6.2'
+
+//    //noinspection GradleCompatible
+//    implementation  'com.android.support:appcompat-v7:+'
+//    //noinspection GradleCompatible
+//    implementation 'com.android.support:recyclerview-v7:28.0.0'
+//    发布朋友圈功能
+    implementation 'com.github.Giftedcat:DynamicPublishing:1.0.0'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation project(':pictureLibrary')
+    implementation project(':mylibrary')
+
+    implementation 'com.zhy:base-rvadapter:3.0.3'
+
+    api 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.5.0'
+
+    //气泡弹窗
+    implementation 'me.kareluo.ui:popmenu:1.1.0'
+
+//    文件上传
+//    implementation 'com.xwdz:okHttpUtils:1.0.6'
+
+//    gif动图
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
+
+//    百度API地图jar包
+
+
+
+
+}

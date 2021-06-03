@@ -1,0 +1,6 @@
+rootProject.name = "ChuFengPro"
+include 'ninegridview', ':app'
+project(':app').projectDir = new File('app')
+include ':pictureLibrary'
+include ':okhttputil'
+include ':mylibrary'

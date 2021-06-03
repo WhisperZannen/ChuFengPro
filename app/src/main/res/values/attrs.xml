@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="civBorderWidth" format="dimension"/>
+        <attr name="civBorderColor" format="color"/>
+        <attr name="civFillColor" format="color"/>
+        <attr name="civBorderOverlay" format="boolean"/>
+    </declare-styleable>
+</resources>
